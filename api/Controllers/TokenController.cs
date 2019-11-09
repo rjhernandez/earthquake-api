@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EarthquakeApi.Controllers
 {
     [ApiController]
-    [Route("/api/{controller}")]
+    [Route("/api/[controller]")]
     public class TokenController : ControllerBase
     {
         private const string THE_PASSWORD = "P@ssword1";
