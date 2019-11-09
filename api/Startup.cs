@@ -62,6 +62,12 @@ namespace EarthquakeApi
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Earthquake API", Version = "v1" });
+                c.AddSecurityDefinition("bearer", new ApiKeyScheme
+                {
+                    Name = "Authorization",
+                    Description = "Please enter access token.",
+                    Type = "apiKey"
+                });
             });
         }
 
